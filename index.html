@@ -21,7 +21,36 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<script>
+        // Your JavaScript code here
+        const translateButton = document.querySelectorAll('.language-button');
+
+        translateButton.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetLang = button.getAttribute('data-lang');
+                const contentToTranslate = document.getElementById('content-to-translate').textContent;
+
+                // Call the translation API and update the content with the translated text
+                // Example API call:
+                // const translatedContent = translateUsingAPI(contentToTranslate, targetLang);
+
+                // Update the content with the translated text
+                // document.getElementById('translated-content').textContent = translatedContent;
+            });
+        });
+    </script>
+	  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J8RS43H9T2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J8RS43H9T2');
+</script>
   </head>
+
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
@@ -42,8 +71,13 @@
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	        <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>-->
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+			  <li class="nav-item"><button class="language-button" data-lang="en">
+				<img src="flag_en.png" alt="English Flag">
+			</button>
+			</li>
 	        </ul>
 	      </div>
+		  
 	    </div>
 	  </nav>
 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
